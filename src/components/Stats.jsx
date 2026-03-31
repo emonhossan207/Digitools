@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stats = () => {
   return (
-    <div className="bg-primary-g text-white py-20 px-4 lg:px-20" id="stats">
+    <div className="bg-primary-gradient text-white py-20 px-4 lg:px-20" id="stats">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center items-center max-w-6xl mx-auto">
         <div className="flex flex-col items-center gap-2">
           <div className="text-4xl lg:text-6xl font-bold">50K+</div>
