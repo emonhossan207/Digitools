@@ -12,7 +12,7 @@ const ProductCard = ({ product, onAddToCart }) => {
       </div>
 
       <h3 className="text-2xl font-bold mb-3 text-slate-900">{product.name}</h3>
-      <p className="text-slate-500 mb-6 line-clamp-clear text-sm leading-relaxed">{product.description}</p>
+      <p className="text-slate-500 mb-6 line-clamp-2 text-sm leading-relaxed">{product.description}</p>
       
       <div className="flex items-baseline gap-1 mb-8">
         <span className="text-3xl font-bold text-slate-900">${product.price}</span>

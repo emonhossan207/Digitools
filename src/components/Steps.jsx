@@ -23,7 +23,7 @@ const Steps = () => {
   ];
 
   return (
-    <div className="py-24 px-4 lg:px-20 bg-slate-50" id="features">
+    <div className="py-25 px-4 lg:px-20 bg-slate-50" id="features">
       <div className="text-center mb-20">
         <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-slate-900">Get Started In 3 Steps</h2>
         <p className="text-base text-slate-500 max-w-2xl mx-auto">
