@@ -90,7 +90,7 @@ const Pricing = () => {
               ))}
             </div>
 
-            <button className={`btn btn-lg w-full  font-bold h-16 text-lg transition-all duration-300 ${plan.highlight ? 'bg-white text-primary border-none hover:bg-slate-100 shadow-xl' : 'btn-primary shadow-lg shadow-primary/20'}`}>
+            <button className={`btn btn-lg w-full rounded-2xl font-bold h-16 text-lg transition-all duration-300 ${plan.highlight ? 'bg-white text-primary border-none hover:bg-slate-100 shadow-xl' : 'btn-primary shadow-lg shadow-primary/20'}`}>
               {plan.buttonText}
             </button>
           </div>
