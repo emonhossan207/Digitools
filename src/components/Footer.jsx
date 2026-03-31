@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
           
-          {/* Logo & Description */}
+          
           <div className="lg:col-span-4">
             <div className="text-3xl font-extrabold mb-6 text-white tracking-tight">
               DigiTools
@@ -17,7 +17,7 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Product Links */}
+
           <div className="lg:col-span-2">
             <h6 className="text-lg font-bold mb-8 text-white uppercase tracking-wider text-sm">Product</h6> 
             <ul className="space-y-4 text-slate-400 text-base font-medium">
@@ -28,7 +28,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company Links */}
+      
           <div className="lg:col-span-2">
             <h6 className="text-lg font-bold mb-8 text-white uppercase tracking-wider text-sm">Company</h6> 
             <ul className="space-y-4 text-slate-400 text-base font-medium">
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources Links */}
+        
           <div className="lg:col-span-2">
             <h6 className="text-lg font-bold mb-8 text-white uppercase tracking-wider text-sm">Resources</h6> 
             <ul className="space-y-4 text-slate-400 text-base font-medium">
@@ -50,22 +50,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social Links (Image Matching image_1.png) */}
+         
           <div className="lg:col-span-2">
             <h6 className="text-lg font-bold mb-8 text-white uppercase tracking-wider text-sm">Social Links</h6> 
             <div className="flex gap-4">
               
-              {/* Instagram */}
+             
               <a className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer">
                 <i className="fa-brands fa-instagram text-[#0F172A] text-xl"></i>
               </a>
 
-              {/* Facebook */}
+            
               <a className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer">
                 <i className="fa-brands fa-square-facebook text-[#0F172A] text-xl"></i>
               </a>
 
-              {/* X (Twitter) */}
+            
               <a className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg cursor-pointer">
                 <i className="fa-brands fa-x-twitter text-[#0F172A] text-lg"></i>
               </a>

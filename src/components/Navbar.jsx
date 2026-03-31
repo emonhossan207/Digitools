@@ -1,32 +1,47 @@
-import React from 'react';
-import { ShoppingCart, Menu } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react'; // X icon add kora hoyeche close button er jonno
+import { useState } from 'react';
 
 const Navbar = ({ cartCount, onViewToggle, currentView }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMobileMenuClick = (view) => {
+    onViewToggle(view);
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="navbar bg-white px-6 lg:px-24 py-5 sticky top-0 z-50 border-b border-slate-100">
+    <nav className="navbar bg-white px-4 lg:px-24 py-4 sticky top-0 z-50 border-b border-slate-100">
       <div className="navbar-start">
         <div className="dropdown lg:hidden">
-          <label tabIndex={0} className="btn btn-ghost p-0 mr-4">
-            <Menu size={24} className="text-slate-700" />
-          </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-4 z-[1] p-4 shadow-xl bg-white rounded-2xl w-64 text-slate-700 border border-slate-50 gap-2">
-            <li><a href="#products" onClick={() => onViewToggle('products')} className="py-3 px-4 active:bg-primary/10">Products</a></li>
-            <li><a href="#features" className="py-3 px-4">Features</a></li>
-            <li><a href="#pricing" className="py-3 px-4">Pricing</a></li>
-            <li><a href="#testimonials" className="py-3 px-4">Testimonials</a></li>
-            <li><a href="#faq" className="py-3 px-4">FAQ</a></li>
-          </ul>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="btn btn-ghost btn-circle text-slate-700"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          
+          {isMenuOpen && (
+            <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow-2xl bg-white rounded-2xl w-[90vw] left-0 text-slate-700 border border-slate-50 gap-2 animate-in fade-in zoom-in duration-200">
+              <li><a href="#products" onClick={() => handleMobileMenuClick('products')} className="py-4 px-4 text-lg font-semibold active:bg-primary/10">Products</a></li>
+              <li><a href="#features" onClick={() => setIsMenuOpen(false)} className="py-4 px-4 text-lg font-semibold">Features</a></li>
+              <li><a href="#pricing" onClick={() => setIsMenuOpen(false)} className="py-4 px-4 text-lg font-semibold">Pricing</a></li>
+              <li><a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="py-4 px-4 text-lg font-semibold">Testimonials</a></li>
+              <li><a href="#faq" onClick={() => setIsMenuOpen(false)} className="py-4 px-4 text-lg font-semibold">FAQ</a></li>
+              <div className="divider"></div>
+              <li><button className="btn btn-primary w-full rounded-xl">Get Started</button></li>
+            </ul>
+          )}
         </div>
         
         <div 
-          className="text-3xl lg:text-4xl font-black text-primary-gradient cursor-pointer tracking-tight" 
+          className="text-2xl lg:text-4xl font-black text-primary-gradient cursor-pointer tracking-tight" 
           onClick={() => onViewToggle('products')}
         >
           DigiTools
         </div>
       </div>
 
-  
+     
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 font-bold text-slate-600 gap-6">
           <li>
@@ -44,28 +59,29 @@ const Navbar = ({ cartCount, onViewToggle, currentView }) => {
           <li><a href="#faq" className="hover:text-primary transition-all duration-300">FAQ</a></li>
         </ul>
       </div>
-      <div className="navbar-end gap-5 lg:gap-8">
-        <div className="flex items-center gap-6 lg:gap-8">
-          
+
+      <div className="navbar-end gap-3 lg:gap-8">
+        <div className="flex items-center gap-4 lg:gap-8">
+       
           <div 
-            className="indicator cursor-pointer text-slate-700 hover:text-primary transition-transform hover:scale-110" 
+            className="indicator cursor-pointer text-slate-700 hover:text-primary transition-transform hover:scale-110 p-2" 
             onClick={() => onViewToggle('cart')}
           >
             {cartCount > 0 && (
-              <span className="indicator-item badge bg-primary-gradient border-none text-white text-[10px] font-bold h-5 min-w-5">
+              <span className="indicator-item badge bg-primary border-none text-white text-[10px] font-bold h-5 min-w-5">
                 {cartCount}
               </span>
             )}
             <ShoppingCart size={22} strokeWidth={2.2} />
           </div>
           
-  
-          <button className="text-[#101727] font-extrabold hover:text-primary transition-colors hidden md:inline-flex text-base tracking-tight">
+          <button className="text-[#101727] font-extrabold hover:text-primary transition-colors hidden sm:inline-flex text-base">
             Login
           </button>
         </div>
 
-        <button className="btn btn-primary h-12 lg:h-14 px-8 lg:px-10 rounded-full font-bold text-base shadow-xl shadow-primary/25 border-none transition-all hover:brightness-110 active:scale-95 active:translate-y-0.5">
+      
+        <button className="btn btn-primary hidden sm:flex h-12 px-8 rounded-full font-bold text-base shadow-lg shadow-primary/25 border-none transition-all hover:brightness-110 active:scale-95">
           Get Started
         </button>
       </div>
