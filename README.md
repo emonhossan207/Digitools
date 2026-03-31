@@ -1,16 +1,13 @@
-# React + Vite
+Project Name: 🚀 Digitool 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description: I built this project to make a cool place where people can find and buy digital tools easily. It’s a small SaaS-style marketplace where everything looks clean and works fast on any device.
 
-Currently, two official plugins are available:
+Technology I used: I kept it modern but simple: React.js for the main logic, Tailwind CSS for easy styling, and DaisyUI to make the buttons and cards look professional without much hassle.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+3 Best Features:
 
-## React Compiler
+Easy Shopping: You can add products to your cart and see the total count update instantly in the navbar—just like a real online shop.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+One-Page Magic: I added a toggle button so you can switch between the "Product List" and your "Cart" on the same page without reloading.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Smart Alerts: I used React-Toastify to show nice popup messages whenever you add or remove something, so you always know what’s happening.
