@@ -25,7 +25,7 @@ function App() {
     }
   }, []);
 
-  // add to cart functionality
+  
   const addToCart = (product) => {
     setBasket((prev) => [...prev, { ...product, cartId: Date.now() }]);
     
@@ -36,7 +36,7 @@ function App() {
     });
   };
 
-  // remove from cart functionality
+  
   const removeFromCart = (id) => {
     const updatedBasket = basket.filter(item => item.id !== id);
     setBasket(updatedBasket);
@@ -47,7 +47,7 @@ function App() {
     });
   };
 
-  // clear cart and go back to products
+  
   const handleCheckout = () => {
     setBasket([]);
     setActiveTab('products');
@@ -77,7 +77,7 @@ function App() {
             Our handpicked collection of premium digital products to boost your workflow.
           </p>
           
-          {/* View Toggler */}
+          {/* Toggler */}
           <div className="inline-flex p-1 bg-slate-50 rounded-2xl border border-slate-200 mb-10">
             <button 
               className={`px-10 py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'products' ? 'bg-primary text-white shadow-md' : 'text-slate-500 hover:bg-white'}`}
@@ -94,7 +94,7 @@ function App() {
           </div>
         </div>
 
-        {/* Conditional Content Rendering */}
+        
         <div className="max-w-7xl mx-auto">
           {activeTab === 'products' ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
